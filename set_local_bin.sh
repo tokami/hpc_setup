@@ -8,3 +8,5 @@ else
 echo "Re-writing .bashrc"
 echo "$PATTERN" >> $FILE
 fi
+
+mkdir -p ${HOME}/bin
