@@ -1,9 +1,10 @@
 #!/bin/sh
 PATTERN="export PATH=\${HOME}/bin:\$PATH"
-if grep -Fxq "$PATTERN" ${HOME}/.bashrc
+FILE=${HOME}/.bashrc
+if grep -Fxq "$PATTERN" $FILE
 then
 echo "Edit already made"
 else
 echo "Re-writing .bashrc"
-echo "$PATTERN" >> ${HOME}/.bashrc
+echo "$PATTERN" >> $FILE
 fi
