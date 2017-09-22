@@ -1,13 +1,28 @@
 #!/bin/sh
 
+## Default parameters
+MAX_DURATION="${MAX_DURATION:-08:00:00}"
+MAX_MEMORY="${MAX_MEMORY:-8gb}"
+OMP_NUM_THREADS="${OMP_NUM_THREADS:-1}"
+
+# Message
+echo "Job parameters"
+echo "=============="
+echo
+echo "MAX_DURATION    = $MAX_DURATION  (hh:mm:ss)"
+echo "MAX_MEMORY      = $MAX_MEMORY"
+echo "OMP_NUM_THREADS = $OMP_NUM_THREADS"
+echo
+
 echo "
 # embedded options to qsub - start with #PBS
 # -- our name ---
 #PBS -N Job
 
 # -- estimated wall clock time (execution time) --
-# -- HH:MM:SS
-#PBS -l walltime=00:01:30
+#PBS -l walltime=$MAX_DURATION
+
+#PBS -l mem=$MAX_MEMORY
 
 # -- run in the current working (submission) directory --
 # cd $PBS_O_WORKDIR <--- didn't work !
