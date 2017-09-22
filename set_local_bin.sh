@@ -10,3 +10,4 @@ echo "$PATTERN" >> $FILE
 fi
 
 mkdir -p ${HOME}/bin
+ln -sf ${HOME}/hpc_setup/submit ${HOME}/bin/submit
