@@ -10,3 +10,4 @@ install-pkg:
 	./install-pkg-TMB.sh
 	./install-pkg-rgdal.sh
 	./install-pkg-DATRAS.sh  
+	./install-common-pkg.sh
