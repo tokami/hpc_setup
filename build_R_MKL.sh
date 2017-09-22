@@ -9,7 +9,7 @@ LIBS=/appl/R/$VERSION/lib
 
 ## Load modules (sets MKLROOT etc)
 module load intel/2017.4.196.mkl
-module load gcc/6.3.0
+## module load gcc/6.3.0
 
 wget https://mirrors.dotsrc.org/cran/src/base/R-3/$TARBALL
 tar zxf $TARBALL
