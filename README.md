@@ -17,6 +17,5 @@ Clone this repo to your home folder and run the main script
 git clone https://github.com/DTUAqua/hpc_setup
 cd hpc_setup
 export PATH=${HOME}/bin:$PATH
-./load_modules.sh
 make all
 ```
