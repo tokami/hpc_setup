@@ -5,7 +5,15 @@ REPOS="https://mirrors.dotsrc.org/cran/"
 
 echo "install.packages(c(
 'devtools',
-'glmmTMB'
+'glmmTMB',
+'raster',
+'maps',
+'mapdata',
+'rgeos',
+'geosphere',
+'maptools',
+'plyr',
+'fields'
 ),repos='$REPOS')" | R --vanilla
 
 
