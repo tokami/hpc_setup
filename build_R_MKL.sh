@@ -7,7 +7,6 @@ TARBALL=$RVERSION.tar.gz
 INCLUDES=/appl/R/$VERSION/include
 LIBS=/appl/R/$VERSION/lib
 
-./modules.sh
 
 wget https://mirrors.dotsrc.org/cran/src/base/R-3/$TARBALL
 tar zxf $TARBALL
