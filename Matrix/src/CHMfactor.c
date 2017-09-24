@@ -163,7 +163,9 @@ SEXP destructive_CHM_update(SEXP object, SEXP parent, SEXP mult)
     CHM_SP A = AS_CHM_SP__(parent);
     R_CheckStack();
 
-    return chm_factor_to_SEXP(chm_factor_update(L, A, asReal(mult)), 0);
+    chm_factor_update(L, A, asReal(mult));
+
+    return R_NilValue;
 }
 
 SEXP CHMfactor_ldetL2up(SEXP x, SEXP parent, SEXP mult)
