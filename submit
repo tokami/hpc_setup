@@ -25,7 +25,14 @@ echo "
 # cd $PBS_O_WORKDIR <--- didn't work !
 cd $PWD
 
+## Reduce time spent in gc
+export R_GC_MEM_GROW=3
+
 # here follow the commands you want to execute
 export OMP_NUM_THREADS=$OMP_NUM_THREADS
+
+cat /proc/cpuinfo
+env
+
 $1
 " | qsub
