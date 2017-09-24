@@ -1088,8 +1088,8 @@ CHM_FR as_cholmod_factor(CHM_FR ans, SEXP x)
 	ans->next = INTEGER(GET_SLOT(x, install("nxt")));
 	ans->prev = INTEGER(GET_SLOT(x, install("prv")));
     }
-    if (!cholmod_check_factor(ans, &c))
-	error(_("failure in as_cholmod_factor"));
+    /* if (!cholmod_check_factor(ans, &c)) */
+    /* 	error(_("failure in as_cholmod_factor")); */
     return ans;
 }
 
