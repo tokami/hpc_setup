@@ -7,6 +7,7 @@ all:
 	make install-pkg
 
 install-pkg:
+	R CMD INSTALL --preclean Matrix
 	./install-pkg-TMB.sh
 	./install-pkg-rgdal.sh
 	./install-pkg-DATRAS.sh  
