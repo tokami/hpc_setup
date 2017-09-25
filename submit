@@ -4,6 +4,7 @@
 MAX_DURATION="${MAX_DURATION:-08:00:00}"
 MAX_MEMORY="${MAX_MEMORY:-8gb}"
 OMP_NUM_THREADS="${OMP_NUM_THREADS:-1}"
+MC_CORES="${MC_CORES:-1}"
 
 # Message
 echo "Job parameters"
@@ -12,6 +13,7 @@ echo
 echo "MAX_DURATION    = $MAX_DURATION  (hh:mm:ss)"
 echo "MAX_MEMORY      = $MAX_MEMORY"
 echo "OMP_NUM_THREADS = $OMP_NUM_THREADS"
+echo "MC_CORES        = $MC_CORES"
 echo
 
 echo "
@@ -19,7 +21,7 @@ echo "
 #PBS -N Job
 #PBS -l walltime=$MAX_DURATION
 #PBS -l mem=$MAX_MEMORY
-#PBS -l nodes=1:ppn=$OMP_NUM_THREADS
+#PBS -l nodes=1:ppn=$(( $OMP_NUM_THREADS * $MC_CORES ))
 
 # -- run in the current working (submission) directory --
 # cd $PBS_O_WORKDIR <--- didn't work !
@@ -30,6 +32,7 @@ export R_GC_MEM_GROW=3
 
 # here follow the commands you want to execute
 export OMP_NUM_THREADS=$OMP_NUM_THREADS
+export MC_CORES=$MC_CORES
 
 cat /proc/cpuinfo
 env
