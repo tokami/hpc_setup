@@ -1,6 +1,6 @@
 #!/bin/sh
 
-REPOS="https://mirrors.dotsrc.org/cran/"
+REPOS="https://cloud.r-project.org"
 
 
 echo "install.packages(c(

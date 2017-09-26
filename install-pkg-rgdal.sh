@@ -1,6 +1,6 @@
 #!/bin/sh
 
-REPOS="https://mirrors.dotsrc.org/cran/"
+REPOS="https://cloud.r-project.org"
 
 export LD_LIBRARY_PATH=/appl/proj/4.9.3/lib:$LD_LIBRARY_PATH
 export PKG_CPPFLAGS="-I/appl/proj/4.9.3/include $CPPFLAGS"
