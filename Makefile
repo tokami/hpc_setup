@@ -5,6 +5,7 @@ all:
 	./build_R_MKL.sh
 	./set_R_MKL.sh
 	make install-pkg
+	./set_Makevars.sh
 
 install-pkg:
 	R CMD INSTALL --preclean Matrix
