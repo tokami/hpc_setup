@@ -11,3 +11,4 @@ fi
 
 mkdir -p ${HOME}/bin
 ln -sf ${HOME}/hpc_setup/submit ${HOME}/bin/submit
+ln -sf ${HOME}/hpc_setup/watchjob ${HOME}/bin/watchjob
