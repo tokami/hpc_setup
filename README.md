@@ -57,4 +57,5 @@ command. We'll see some examples in the following.
 
 ### Some real examples
 
-* [Example 1](Example1) Speeding up a single model using a parallel BLAS
+* [Example 1](Example1) Speeding up a single model using the parallel BLAS.
+* [Example 2](Example2) Speeding up residuals using the R package `parallel`.
