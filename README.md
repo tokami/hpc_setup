@@ -53,7 +53,7 @@ MC_CORES        = 1
 ```
 
 These four environment variables can be passed to the `submit`
-command. We'll se some examples in the following.
+command. We'll see some examples in the following.
 
 ### Some real examples
 
