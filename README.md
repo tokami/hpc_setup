@@ -40,6 +40,21 @@ In order to submit this script to the queue replace the above line by
 submit "R --vanilla < script.R"
 ```
 
+On submission you'll see a list of default parameters attached to the job
+
+```
+Job parameters
+==============
+
+MAX_DURATION    = 08:00:00  (hh:mm:ss)
+MAX_MEMORY      = 8gb
+OMP_NUM_THREADS = 1
+MC_CORES        = 1
+```
+
+These four environment variables can be passed to the `submit`
+command. We'll se some examples in the following.
+
 ### Some real examples
 
 * [Example 1](Example1) Speeding up a single model using a parallel BLAS

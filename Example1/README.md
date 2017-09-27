@@ -17,7 +17,9 @@ The number of requested threads are passed to `submit` through the
 environment variable `OMP_NUM_THREADS`. For example, to use 8 threads
 to fit the model use
 
+```shell
 OMP_NUM_THREADS=8 submit "R --vanilla < ar1_4D.R"
+```
 
 In general this approach has limited scalability. Here are some
 timings using 1,2,4, and 8 threads respectively on an
