@@ -16,6 +16,7 @@ echo "OMP_NUM_THREADS = $OMP_NUM_THREADS"
 echo "MC_CORES        = $MC_CORES"
 echo
 
+JOBID=`
 echo "
 # embedded options to qsub - start with #PBS
 #PBS -N Job
@@ -39,3 +40,12 @@ env
 
 $1
 " | qsub
+`
+
+echo "====="
+echo $JOBID
+echo "====="
+
+./qwait.sh $JOBID
+
+echo "complete"
