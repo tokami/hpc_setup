@@ -39,3 +39,7 @@ In order to submit this script to the queue replace the above line by
 ```shell
 submit "R --vanilla < script.R"
 ```
+
+### Some real examples
+
+* [Example 1](Example1) Speeding up a single model using a parallel BLAS
