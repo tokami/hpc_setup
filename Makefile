@@ -12,6 +12,4 @@ install-pkg:
 	./install-pkg-TMB.sh
 	./install-pkg-rgdal.sh
 	./install-pkg-DATRAS.sh  
-	./install-pkg-spict.sh  
-	./install-pkg-DLMtool.sh  
 	./install-common-pkg.sh
