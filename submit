@@ -46,6 +46,13 @@ $*
 if [ $QWAIT == 1 ]
 then
   echo "Waiting for $JOBID"
-  qwait.sh $JOBID
-  echo "completed $JOBID"
+  while true
+  do
+    if ! qstat | grep $JOBID | grep -q "\ [Q|R]\ "
+    then
+      echo "completed $JOBID"
+      exit 0
+    fi
+    sleep 1
+  done
 fi
