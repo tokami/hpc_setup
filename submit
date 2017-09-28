@@ -5,6 +5,7 @@ MAX_DURATION="${MAX_DURATION:-08:00:00}"
 MAX_MEMORY="${MAX_MEMORY:-8gb}"
 OMP_NUM_THREADS="${OMP_NUM_THREADS:-1}"
 MC_CORES="${MC_CORES:-1}"
+QWAIT="${QWAIT:-0}"
 
 # Message
 echo "Job parameters"
@@ -38,14 +39,13 @@ export MC_CORES=$MC_CORES
 cat /proc/cpuinfo
 env
 
-$1
+$*
 " | qsub
 `
 
-echo "====="
-echo $JOBID
-echo "====="
-
-./qwait.sh $JOBID
-
-echo "complete"
+if [ $QWAIT == 1 ]
+then
+  echo "Waiting for $JOBID"
+  ./qwait.sh $JOBID
+  echo "completed $JOBID"
+fi
