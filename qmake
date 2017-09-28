@@ -1,0 +1,6 @@
+#!/bin/sh
+
+FILE=Makefile
+echo FILE=$FILE > .$FILE.tmp
+grep --no-group-separator -P -A 1 '^[^\t]' $FILE | sed 's/^\t.*/\tQWAIT=1 submit $(MAKE) -f $(FILE) $@/g'  >> .$FILE.tmp
+make -f .$FILE.tmp $*
