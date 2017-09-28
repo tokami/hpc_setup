@@ -15,7 +15,9 @@ echo "install.packages(c(
 'fields',
 'rstan',
 'knitr',
-'ggplot2'
+'ggplot2',
+'curl',
+'digest'
 ),repos='$REPOS')" | R --vanilla
 
 
