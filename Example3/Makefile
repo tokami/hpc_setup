@@ -1,5 +1,7 @@
 SECONDS=3
 
+all: results/x.RData results/y.RData
+
 data/x.RData:
 	mkdir -p data
 	echo
@@ -27,8 +29,6 @@ results/y.RData: data/y.RData
 	echo "Making the y results"
 	DATA="data/y.RData" R --slave < script.R
 	sleep $(SECONDS)
-
-all: results/x.RData results/y.RData
 
 clean:
 	rm -rf data results
