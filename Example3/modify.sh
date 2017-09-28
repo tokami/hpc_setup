@@ -15,6 +15,11 @@ echo >> $FILE.tmp
 
 sed 's/\t/\n\t$(MAKE) -f $(FILE) /g' tmp3 >> $FILE.tmp
 
+sed 's/^\t.*/\t/g' $FILE
+
+echo FILE=$FILE > .$FILE.tmp
+grep --no-group-separator -P -A 1 '^[^\t]' $FILE | sed 's/^\t.*/\tQWAIT=1 submit $(MAKE) -f $(FILE) $@/g'  >> .$FILE.tmp
+
 # This can be done using grep:
 #
 # $ cat input.txt | grep --no-group-separator -B 1 '^[^C]'
