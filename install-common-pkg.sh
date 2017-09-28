@@ -17,7 +17,8 @@ echo "install.packages(c(
 'knitr',
 'ggplot2',
 'curl',
-'digest'
+'digest',
+'DLMtool'
 ),repos='$REPOS')" | R --vanilla
 
 
@@ -29,4 +30,8 @@ devtools::install_github('kaskr/gridConstruct',subdir='gridConstruct')
 
 echo "
 devtools::install_github('glmmTMB/glmmTMB/glmmTMB')
+" | R --vanilla
+
+echo "
+devtools::install_github('mawp/spict/spict')
 " | R --vanilla
