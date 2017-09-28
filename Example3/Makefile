@@ -31,4 +31,4 @@ results/y.RData: data/y.RData
 	sleep $(SECONDS)
 
 clean:
-	rm -rf data results
+	rm -rf data results Job.*

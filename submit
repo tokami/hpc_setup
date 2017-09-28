@@ -46,6 +46,6 @@ $*
 if [ $QWAIT == 1 ]
 then
   echo "Waiting for $JOBID"
-  ./qwait.sh $JOBID
+  qwait.sh $JOBID
   echo "completed $JOBID"
 fi
